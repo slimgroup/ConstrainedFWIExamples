@@ -19,3 +19,24 @@ To (locally) reproduce this project, do the following:
 
 This will install all necessary packages for you to be able to run the scripts and
 everything should work out of the box.
+
+# Content
+
+This repository currently contains a single notebooks `notboks/01_fwi_L2_constraints.ipynb` that implements FWI with TV constraints and box constraints with the projectd quasi-Newton method. This notebook is an adaptation of an FWI [example](https://github.com/ChevronETC/Examples/blob/main/50_fwi/01_fwi_L2.ipynb) using an open-source framework for wave propagation and inversion. The original example does not implement constraints and use a standard L-BFGS solver. In the example here, we show how to use out constraints framework, [SetIntersectionProjection](https://github.com/slimgroup/SetIntersectionProjection.jl), to setup constraints for FWI.
+
+The major advantages of our constraints frameowrk is that, unlike standard optimization packages, are:
+
+- The constraints projection do not involve any function or gradient evaluation, making it computationally efficient.
+- The projection algorithm is implemented to be computationally scalable up to 3D, and support distriubted computing of the projection for efficiency.
+- A broad range of constraints are available, not only box constraints, such as TV, nuclear norm, rank, ....
+
+We refer to the [Documentation](https://petersbas.github.io/SetIntersectionProjectionDocs/) of the software for a more detailed overview of the capabilities and performance.
+
+# Links
+
+- The origianl notebook can be found at [Notebook](https://github.com/ChevronETC/Examples/blob/main/50_fwi/01_fwi_L2.ipynb) for reference. This repository is in progress so their result may have changed.
+
+- The constraints framework can be found at [SetIntersectionProjection](https://github.com/slimgroup/SetIntersectionProjection.jl) and is described in [Projections].
+
+
+[Projections]: https://slim.gatech.edu/content/algorithms-and-software-projections-intersections-convex-and-non-convex-sets-applications

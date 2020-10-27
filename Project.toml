@@ -1,6 +1,21 @@
 name = "ConstrainedFWIExamples"
 authors = ["Mathias Louboutin"]
+
+[deps]
+Distributed = "8ba89e20-285c-5b6f-9357-94700520ee1b"
+DistributedArrays = "aaf54ef3-cdf8-58ed-94cc-d582ad619b94"
+DistributedJets = "5b65064a-1d0b-5b23-8760-570290dfee43"
+DrWatson = "634d3b9d-ee7a-5ddf-bec9-22491ea816e1"
+FFTW = "7a1cc6ca-52ef-59f5-83cd-3a7055c09341"
+JetPack = "24ef3835-3876-54c3-8a7a-956cf69ca0b2"
+JetPackDSP = "b1babd66-454c-5c15-86a3-b3c308963df9"
+JetPackTransforms = "e0630bc5-6e1f-509c-a3e4-0aea24bd2b1c"
+Jets = "2a57b368-ab28-5ba9-84aa-637fe7991822"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Optim = "429524aa-4258-5aef-a3af-852621145aeb"
+Printf = "de0858da-6303-5e67-8744-51eddeeeb8d7"
+PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
+Random = "9a3f8284-a2c9-5f02-9a11-845980a1fd5c"
+
 [compat]
 julia = "1.5.1"
-[deps]
-DrWatson = "634d3b9d-ee7a-5ddf-bec9-22491ea816e1"
