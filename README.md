@@ -22,7 +22,15 @@ everything should work out of the box.
 
 # Content
 
-This repository currently contains a single notebooks `notboks/01_fwi_L2_constraints.ipynb` that implements FWI with TV constraints and box constraints with the projectd quasi-Newton method. This notebook is an adaptation of an FWI [example](https://github.com/ChevronETC/Examples/blob/main/50_fwi/01_fwi_L2.ipynb) using an open-source framework for wave propagation and inversion. The original example does not implement constraints and use a standard L-BFGS solver. In the example here, we show how to use out constraints framework, [SetIntersectionProjection](https://github.com/slimgroup/SetIntersectionProjection.jl), to setup constraints for FWI.
+This repository currently contains two  notebooks 
+
+## 01_const_fwi_judi.ipynb
+
+This notebook implements FWI with TV constraints and box constraints with the projectd quasi-Newton method. In this example, we highlight the use of constraints for a very simple transmission example with a squared perturation on the middle. This example is using [JUDI](https://github.com/slimgroup/JUDI.jl) as the framework for wave propagation and inversion where the wave-propagators are implemented using [Devito](https://github.com/devitocodes/devito). This tutorial demonstrates that our constraints framework  [SetIntersectionProjection](https://github.com/slimgroup/SetIntersectionProjection.jl) provides better result than standard FWI while never requiring any additional PDE solves (function and/or gradient evaluation).
+
+
+## 02_constr_fwi_jetpack.ipynb
+This notebook implements FWI with TV constraints and box constraints with the projectd quasi-Newton method. This notebook is an adaptation of an FWI [example](https://github.com/ChevronETC/Examples/blob/main/50_fwi/01_fwi_L2.ipynb) using an open-source framework for wave propagation and inversion. The original example does not implement constraints and use a standard L-BFGS solver. In the example here, we show how to use out constraints framework, [SetIntersectionProjection](https://github.com/slimgroup/SetIntersectionProjection.jl), to setup constraints for FWI.
 
 The major advantages of our constraints frameowrk is that, unlike standard optimization packages, are:
 
