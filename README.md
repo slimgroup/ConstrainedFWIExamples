@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/307709753.svg)](https://zenodo.org/badge/latestdoi/307709753)
+
 # ConstrainedFWIExamples
 
 This code base is using the Julia Language and [DrWatson](https://juliadynamics.github.io/DrWatson.jl/stable/)
